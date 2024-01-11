@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Nu Gebeya</title>
+    <style>
+      .grid-item {
+        width: 25%;
+        padding: 10px;
+        margin: 30px;
+    
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+     <div class="logo-container">
+    <a href="index.html"><img src="../images/logos/logo.png" width="80px" height="80px" class="logo"></a>
+    </div>
+      <ul class="nav-links">
+        <li><b><a href="index.html">Home</a></b></li>
+        <li><b><a href="shop.html">Shop</a></b></li>
+        <li><b><a href="about.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="contact.html">Contact</a></b></li>
+        
+      </ul>
+  
+  <div class="icon-cart">
+   <a href="cart.html"><img src="../images/logos/cart-outline.svg" width='40px' class='icon-carts' ></a>
+    <span>0</span>
+  </div>
+</nav>
+<h2 align="center">Blog</h2>
+
+ 
+    <div class="container">
+      <div class="filter">
+        <button data-name='*' class="btn btn-info active">All</button>
+        <button data-name=".culture" class="btn btn-primary">Culture</button>
+        <button data-name=".food" class="btn btn-danger">Food</button>
+        <button data-name=".history" class="btn btn-success">History</button>
+      </div>
+      
+      <div class="grid">
+        <div class="grid-item food">
+          <img src="../images/firfir.jpeg" width="100%" height="280px">
+          <h4>How to make Firfir</h4>
+          <p><b>Ingredients</b><br>
+          2 large onions, chopped<br>
+          1/4 cup vegetable oil<br>
+          1-2 tablespoons berbere<br>
+          <br>
+          <button class="blogbtn"><a href="firfir.html">Continue reading</a></button>
+<br>
+        </div>
+        <div class="grid-item culture">
+          <img src="../images/habeshalbs.jpg" width="100%" height="280px">
+          <h3>How the Habesha Libs Made</h3>
+    <p>The Habesha Kemis is a white hand-woven cotton clothing that is made from shemma. This is a cloth made by sewing together long strips  
+      <br></p>
+    
+<button class="blogbtn"><a href="taba.html">Continue reading</a></button>
+
+        </div>
+        <div class="grid-item history">
+          <img src="../images/atse.jpeg" width="100%" height="280px">
+          <h3>Who was Atse Yohannes</h3>
+    <p>Atse Yohannes IV was Emperor of Ethiopia from 1871 to his death in 1889 at the Battle of Gallabat, and king of Ethiopia from 1867 to 1871.</p>
+<button class="blogbtn"><a href="atsey.html">Continue reading</a></button>
+
+        </div>
+        <div class="grid-item culture">
+          <img src="../images/jew2.jpg" width="100%" height="280px">
+          <h3>Facts about Ethiopian Jewelry</h3>
+    <p>Gold is esteemed in the Ethiopian society, being a popular gift for weddings, graduations ceremonies, child baptism, awards and other events.</p>
+<button class="blogbtn"><a href="opinion.html">Continue reading</a></button>
+          <br>
+        </div>
+        <div class="grid-item culture">
+          <img src="../images/gojobet.jpeg" width="100%" height="280px">
+          <h3>Exploring Ethiopia's 'Gojo Bet'</h3>
+    <p>I walked through one of these gates and met an elderly grandmother and her granddaughters. We were invited into there gojo bet where I shot these photos of a home that  </p>
+                    <button class="blogbtn"><a href="review.html">Continue reading</a></button>
+
+        </div>
+       
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="isotope.pkgd.min.js"></script>
+    <script>
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+          name: function (element) {
+            return $(element).text();
+          }
+        }
+      });
+      $('.filter button').on("click", function () {
+        var value = $(this).attr('data-name');
+          $grid.isotope({
+            filter: value
+          });
+        $('.filter button').removeClass('active');
+        $(this).addClass('active');
+      })
+      $('.sort button').on("click", function () {
+        var value = $(this).attr('data-name');
+        $grid.isotope({
+          sortBy: value
+        });
+        $('.sort button').removeClass('active');
+        $(this).addClass('active');
+      })
+    </script>
+
+<div class="footercontainer">
+    <div class="footer-about">
+        <h2 class="outro-0" >ኑ ገበያ</h2>
+        <h3 class="outro-1">Your One Stop For Everything Ethiopian </h3>
+        <br>
+        <ul class="cta">
+          <li><a href="tel:+251912345678" class="socials"><img src="../images/logos/call.svg" class="socials">+251912345678</a></li>    
+           <li><a href="mailto:Ephrataaa@gmail.com" class="socials"><img src="../images/logos/mail.svg" class="socials">Support@nugebeya.com</a></li>  
+        </ul>
+    </div>
+    <div class="footer-social-media">
+      <h2>We're Social!</h2><br>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/firdewsabrar.firdewsabrar"><img src="../images/logos/logo-facebook.svg" class="socials"></a></li>
+            <li><a href="https://www.instagram.com/_ephi__/"><img src="../images/logos/logo-instagram.svg" class="socials"></a></li>
+            <li><a href="https://twitter.com/Firdews58896750"><img src="../images/logos/logo-twitter.svg" class="socials"></a></li>
+            <li><a href=""><img src="../images/logos/logo-youtube.svg" class="socials"></a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-qlink"> 
+   
+    <h2 align="center" class="footer-qlink">Quick links</h2>
+      <p><a href="about.html" class="bg">About</a></p>
+      <p><a href="blog.html" class="bg">Blog</a></p>
+      <p><a href="cart.html" class="bg">Cart</a></p>
+      <p><a href="contact.html" class="bg">Contact us</a></p>
+      <p><a href="contact.html#accordion" class="bg">FAQ</a></p>
+     </div>
+    <div class="footer-subs"> 
+      
+       <h2>Subscibe to our newsletter</h2>
+       <div class="subs">
+      <input type="email" placeholder="Email">
+      <button type="submit"> <strong>Subscribe</strong></button>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+   
+  <script src="app.js"></script>
+
+</body>
+</html>
